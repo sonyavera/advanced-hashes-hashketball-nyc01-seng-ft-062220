@@ -45,8 +45,12 @@ def player_numbers(team_lookup)
         if key == :players
           value.each do |numbers|
             jersey_numbers.push(numbers[:number])
-          end
+           end
         end
+      end
+    end
+  end
+  return jersey_numbers
 end
 
 def game_hash
