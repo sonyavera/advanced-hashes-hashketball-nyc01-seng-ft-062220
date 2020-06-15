@@ -36,6 +36,10 @@ def team_names
   end
 end
 
+def player_numbers
+end
+
+
 def player_stats(player_name)
   player_stats = {}
   game_hash.each do |team, team_data|
@@ -49,21 +53,7 @@ def player_stats(player_name)
   player_stats
 end
 
-def player_stats(player_name)
-  game_hash.each do |team, team_data|
-    team_data.each do |key, value|
-     if key == :players
-       value.each do |player, stats|
-        if player == player_name
-          return stats
-        end
-       end
-      end
-    end
-  end
-end
-def big_shoe_rebounds
-end
+
 
 def game_hash
   {
