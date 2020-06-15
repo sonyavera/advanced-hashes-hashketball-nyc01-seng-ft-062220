@@ -52,19 +52,20 @@ end
 #   return jersey_numbers
 # end
 
-def player_numbers(team_lookup)
-  jersey_numbers = []
+def player_numbers(input)
+  output = []
   game_hash.each do |team, team_info|
-    if team_lookup == team_info[:team_name]
+    if team_info[:team_name] == input 
       team_info.each do |key, value|
         if key == :players
-          value.each do |data|
-            jersey_numbers.push(data[:numbers])
-end
-end
-end
-end
-end
+          value.each do |player|
+          output.push(player[:number])
+          end
+        end
+      end
+    end
+  end
+  return output
 end
 
 def game_hash
