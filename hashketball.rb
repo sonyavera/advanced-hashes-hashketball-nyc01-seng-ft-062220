@@ -36,6 +36,12 @@ def team_names
   end
 end
 
+def player_numbers(team_lookup)
+  jersey_numbers = []
+  if team_lookup == home
+    
+end
+
 def game_hash
   {
     home: {
