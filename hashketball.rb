@@ -68,7 +68,12 @@ def player_stats(input)
 end
 
 def big_shoe_rebounds
-  
+  #set a value for largest shoe size as 10
+  #access the players keys
+  #determine shoe shoe_size
+  #compare it with the last shoe size 
+  #if its the largest, change the value of largest shoe size
+  #whichever player is associated with that largest shoe size, return their number of rebounds
 end
 
 def game_hash
