@@ -60,7 +60,7 @@ def player_numbers(team_lookup)
         if key == :players
           value.each do |numbers|
                     binding.pry
-            jersey_numbers.push()
+            jersey_numbers.push(:numbers)
 end
 end
 end
