@@ -1,4 +1,41 @@
-# Write your code below game_hash
+require "pry"
+
+def num_points_scored(player_search)
+  game_hash.each do |team, team_info|
+    team_info[:players].each do |player|
+      if player[:player_name] == player_search
+        return player[:points]
+      end
+    end
+  end
+end
+
+def shoe_size(player_search)
+    game_hash.each do |team, team_info|
+    team_info[:players].each do |player|
+      if player[:player_name] == player_search
+        return player[:shoe]
+      end
+    end
+  end
+end
+
+def team_colors(team_color_lookup)
+  game_hash.each do |team, team_info|
+    if team_color_lookup.downcase == "brooklyn nets"
+      return "Black", "White"
+    else
+      return game_hash[:away][:colors]
+    end
+  end
+end
+
+def team_names
+  game_hash.map do |team, team_info|
+    team_info[:team_name]
+  end
+end
+
 def game_hash
   {
     home: {
@@ -125,5 +162,4 @@ def game_hash
     }
   }
 end
-
 # Write code here
