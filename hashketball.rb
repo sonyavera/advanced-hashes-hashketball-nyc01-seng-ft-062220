@@ -36,20 +36,17 @@ def team_names
   end
 end
 
-def player_numbers(input)
-  jersey_numbers = []
-  game_hash.each do |team, team_info|
-    if team_info[:team_name] == input 
-      team_info.each do |key, value|
-        if key == :players
-          value.each do |player|
-          jersey_numbers << player[:number]
-          end
-        end
+def player_stats(player_name)
+  player_stats = {}
+  game_hash.each do |team, team_data|
+    team_data[:players].each do |stats|
+      if stats[:name] == player_name
+        stats.delete(:name)
+        player_stats = stats
       end
     end
   end
-  return jersey_numbers
+  player_stats
 end
 
 def player_stats(player_name)
