@@ -43,6 +43,7 @@ def player_numbers(team_lookup)
       team_info.each do |key, value|
         if key == :players
           value.each do |numbers|
+            binding.pry
             jersey_numbers.push()
 end
 
