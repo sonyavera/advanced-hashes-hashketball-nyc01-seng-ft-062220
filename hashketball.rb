@@ -52,7 +52,7 @@ def player_numbers(input)
   return jersey_numbers
 end
 
-def player_stats
+def player_stats(player_name)
   
 end
 
