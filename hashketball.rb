@@ -52,7 +52,11 @@ def player_numbers(input)
   return jersey_numbers
 end
 
+def player_stats
+end
 
+def big_shoe_rebounds
+end
 
 def game_hash
   {
