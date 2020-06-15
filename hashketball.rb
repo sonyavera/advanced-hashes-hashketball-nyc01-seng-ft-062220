@@ -58,7 +58,7 @@ def player_numbers(team_lookup)
     if team_lookup == team_info[:team_name]
       team_info.each do |key, value|
         if key == :players
-          value.each do |data|
+          value.each do |key, value|
                     binding.pry
             jersey_numbers.push(:numbers)
 end
