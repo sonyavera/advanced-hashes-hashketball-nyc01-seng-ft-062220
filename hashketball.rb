@@ -43,8 +43,8 @@ def player_numbers(team_lookup)
     if team_lookup == team_info[:team_name]
       team_info.each do |key, value|
         if key == :players
-          value.each do |numbers|
-            jersey_numbers.push(numbers[:number])
+          value.each do |player_number|
+            jersey_numbers.push(player_number[:number])
           end
         end
       end
