@@ -53,10 +53,10 @@ def player_numbers(input)
 end
 
 def player_stats(player_name)
-  game_hash.each do |location, team|
-    team.each do |attribute, data|
-     if attribute == :players
-       data.each do |player, stats|
+  game_hash.each do |team, team_data|
+    team_data.each do |key, value|
+     if key == :players
+       value.each do |player, stats|
         if player == player_name
           return stats
         end
