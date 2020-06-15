@@ -36,37 +36,23 @@ def team_names
   end
 end
 
-# def player_numbers(team_lookup)
-#   jersey_numbers = []
-#   game_hash.each do |team, team_info|
-#     if team_lookup == team_info[:team_name]
-#       team_info.each do |key, value| # ex. key= team name
-#         if key == :players
-#           value.each do |player_number| value = "player_name" or "number"
-#             jersey_numbers.push(player_number[:number])
-#           end
-#         end
-#       end
-#     end
-#   end
-#   return jersey_numbers
-# end
-
 def player_numbers(input)
-  output = []
+  jersey_numbers = []
   game_hash.each do |team, team_info|
     if team_info[:team_name] == input 
       team_info.each do |key, value|
         if key == :players
           value.each do |player|
-          output.push(player[:number])
+          jersey_numbers << player[:number]
           end
         end
       end
     end
   end
-  return output
+  return jersey_numbers
 end
+
+
 
 def game_hash
   {
