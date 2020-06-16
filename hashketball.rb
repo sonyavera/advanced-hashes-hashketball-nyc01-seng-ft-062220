@@ -74,7 +74,7 @@ def big_shoe_rebounds
   #compare it with the last shoe size 
   #if its the largest, change the value of largest shoe size
   #whichever player is associated with that largest shoe size, return their number of rebounds
-  largest_shoe_size = 10
+  largest_shoe_size = 0
   
 end
 
