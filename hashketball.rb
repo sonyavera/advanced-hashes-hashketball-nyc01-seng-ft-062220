@@ -76,7 +76,11 @@ def big_shoe_rebounds
   #whichever player is associated with that largest shoe size, return their number of rebounds
   largest_shoe_size = 0
   rebounds = 0
-  
+  game_hash.each do |team, team_info|
+    team_info.each do |key, value|
+      if key == :players
+        key.each
+end
   
 end
 
